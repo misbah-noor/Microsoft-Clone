@@ -1821,6 +1821,14 @@ video {
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:border {
+    border-width: 1px;
+  }
+
+  .md\:border-none {
+    border-style: none;
+  }
+
   .md\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
