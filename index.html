@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/output.css">
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+     <!-- FONT -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Londrina+Outline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- title -->
+    <title>Microsoft-AI, Cloud, Productivity, Gaming & Apps</title>
+</head>
+<body class="index font-poppins h-screen scroll-smooth overflow-x-hidden">
+    
+    <header id="top">
+     <!-- Navbar -->
+    <nav class="navbar flex justify-between items-center py-1 px-2 bg-white">
+        <div class="flex justify-center items-center md:order-2">
+            <div id="hamburger" class="inline-block p-4 cursor-pointer md:hidden" onclick="toggleMenu()">
+                <div class="line w-6 h-0.5 my-1 bg-black"></div>
+                <div class="line w-6 h-0.5 my-1 bg-black"></div>
+                <div class="line w-6 h-0.5 my-1 bg-black"></div>
+            </div>
+            <button class="searchbtn md:hidden"><img class="w-5" src="images/search.png" alt=""></button>
+        </div>
+        <div class="logo text-center md:order-1 md:flex">
+            <div class="p-4 max-w-36 md:w-32 lg:w-auto"><img src="images/logo.png" class="object-cover" alt="error"></div>
+            <div class="features md:flex md:space-x-2 lg:space-x-4 md:mx-12 md:w-auto w-fit absolute inset-0 -translate-x-96 bg-gray-200 md:bg-white md:translate-x-0 md:static md:mt-7 text-md">
+                <div class="fitem cursor-pointer">Microsoft 365</div>
+                <div class="fitem cursor-pointer">Office</div>
+                <div class="fitem cursor-pointer">Copilot</div>
+                <div class="fitem cursor-pointer">Windows</div>
+                <div class="fitem cursor-pointer">Surface</div>
+                <div class="fitem cursor-pointer">Support</div>
+            </div>
+        </div>
+        <div class="right-navbar p-4 md:order-3 text-center flex md:mt-4 space-x-3 lg:space-x-4">
+            <span class="mr-2 hidden lg:block">All Microsoft</span>
+            <span class="hidden xl:block">Search</span>
+            <button class="searchbtn hidden md:block"><img class="w-5 cursor-pointer ml-[-50%]" src="images/search.png" alt="" title="Search microsoft.com"></button>
+            <span class="hidden xl:block">Cart</span>
+            <div>
+                <a href="cart.html"><img class="w-6 ml-[-35%] cursor-pointer mt-1" src="images/shopping-cart.png" title="0 items in shopping cart" alt=""></a></div>
+            <span class="hidden xl:block">Sign in</span>
+            <div><a href="signin.html"><img class="w-8 ml-[-35%] cursor-pointer" src="images/profile.png" alt=""></a></div>
+        </div>
+      
+<!--Mobile navbar-->
+      <div id="nav-close" class="nav-close hidden fixed top-0 left-0 w-full z-10 md:hidden bg-white pt-4 h-screen">
+        <div id="mbnavbar" class="flex justify-between items-center mx-2 my-1">
+            <div class="flex justify-center items-center">
+            <button id="close" class=" inline-block px-4 cursor-pointer md:hidden" onclick="toggleMenu()">
+            <i class="text-xl font-bold ri-close-large-line"></i>
+            </button>
+                <button class="searchbtn md:hidden"><img class="w-5" src="images/search.png" alt=""></button>
+            </div>
+            <div class="logo text-center">
+                <div class="px-4 max-w-36 md:w-32 lg:w-auto"><img src="images/logo.png" class="object-cover" alt="error"></div>
+            </div>
+            <div class="right-navbar px-4 md:order-3 text-center flex md:mt-4 space-x-3">  
+                <span class="hidden lg:block">Search</span>
+                <button class="searchbtn hidden md:block"><img class="w-5 cursor-pointer ml-[-50%]" src="images/search.png" alt=""></button>
+                <span class="hidden lg:block">Cart</span>
+                <div><a href="cart.html"><img class="w-6 ml-[-35%] cursor-pointer mt-1" src="images/shopping-cart.png" alt=""></a></div>
+                <span class="hidden lg:block">Sign in</span>
+                <div><a href="signin.html"><img class="w-8 ml-[-35%] cursor-pointer" src="images/profile.png" alt=""></a></div>
+            </div>
+        </div>
+
+<div class="mt-6 text-md text-black font-poppins bg-gray-50 p-2">
+    <a href="#" class="font-normal mx-1 my-4 p-3 border border-dashed border-black block rounded-lg">Microsoft 365</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font-normal m-3 p-3 focus:border focus:border-dashed focus:border-black  block rounded-lg">Office</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Copilot</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Windows</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Support</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Software</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">PCs & Devices</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Entertainment</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Developer & IT</a>
+    <div class="h-[1px] bg-gray-200"></div>
+    <a href="#" class="font medium m-3 p-3 focus:border focus:border-dashed focus:border-black block rounded-lg">Business</a>
+   
+</div>      
+
+</div>
+    </nav>
+
+ <!-- Search modal-->
+ <div id="searchmodal" class="hidden">
+    <div class="fixed bg-black bg-opacity-60 inset-0 flex justify-center z-50 pt-12">
+        <div class="bg-white p-8 w-96 h-44 rounded">
+            <i id="closesearch" class="cursor-pointer flex justify-end font-bold ri-close-large-line"></i>
+            <input type="text" class="w-full bg-white shadow-inner mt-6 rounded-full border border-gray-200 text-base outline-none text-gray-700 py-2 px-5 leading-8 transition-colors duration-200 ease-in-out" placeholder="Search microsoft.com">
+        </div>
+
+       </div> 
+   </div>
+    </header>
+     
+      
+<main>
+
+     <!-- Slider -->
+     <section class="slider flex flex-col-reverse md:flex-row bg-blue-300 bg-opacity-90 opacity-95">
+        
+        <div class="left md:flex md:flex-col md:justify-center md:items-start py-12 text-black xl:ml-44 lg:ml-[2%] md:w-[46%]">
+            <h2 class="text-2xl font-semibold md:text-4xl mx-5 md:w-[75%]">Maximise the everyday with Microsoft 365</h2>
+            <p class="md:w-3/4 mx-5 text-md mt-4 md:text-left">Get online protection, secure cloud storage and innovative apps designed to fit your needs - all in one plan.</p>
+            <button class="bg-blue-700 text-white text-lg px-5 py-3 md:px-6 md:py-4 rounded-md my-6 font-medium mx-5 duration-200 hover:bg-blue-800 transition ">For one person</button>
+        </div>
+        <div class="right overflow-hidden">
+            <img class="w-auto h-full md:w-[64rem]" src="images/slider1.avif" alt="">
+        </div>
+     </section>
+
+     <!-- Promo -->
+     <section class="promo container space-y-6 mx-auto flex flex-col lg:flex-row md:justify-center md:mt-8">
+        <div class="item flex items-center lg:flex lg:flex-col lg:justify-center lg:space-y-5 mx-4 space-x-2 mt-6">
+            <img class="w-7 md:w-10" src="images/windows-8.png" alt="">
+            <span class="font-medium">Choose your Microsoft 365</span>
+        </div>
+        <div class="item lg:flex lg:flex-col lg:justify-center lg:space-y-5 flex items-center mx-4 space-x-2">
+            <img class="w-7 md:w-10" src="images/internet-explorer.png" alt="">
+            <span class="font-medium">Explore surface devices</span>
+        </div>
+        <div class="item lg:flex lg:flex-col lg:justify-center lg:space-y-5 flex items-center mx-4 space-x-2">
+            <img class="w-7 md:w-10" src="images/xbox.png" alt="">
+            <span class="font-medium">Buy Xbox games</span>
+        </div>
+        <div class="item lg:flex lg:flex-col lg:justify-center lg:space-y-5 flex items-center mx-4 space-x-2">
+            <img class="w-7 md:w-10" src="images/windows-8.png" alt="">
+            <span class="font-medium">Get Windows 11</span>
+        </div>
+     </section>
+
+     <!-- Card -->
+     <section class="cards my-12 py-7">
+<div class="flex flex-wrap justify-center">
+<div class="card shadow-lg w-full sm:w-96 flex flex-col m-6 overflow-hidden">
+    <div class="image overflow-hidden">
+        <img src="images/c1.jpeg" class="object-cover w-full" alt="">
+    </div>
+    <div class="card-content p-7">
+        <h2 class="font-medium text-3xl mb-3">Designed for life today - and tomorrow</h2>
+        <p class="sm:w-80 text-lg">
+            The next-generation of games. Your goals. Friends and family. Windows 11 was made to bring you closer to everything you love.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">See if your PC is ready</button>
+    </div>
+</div>
+<div class="card shadow-lg w-full sm:w-96 flex flex-col m-6 overflow-hidden">
+    <div class="image overflow-hidden">
+        <img src="images/c2.avif" class="object-cover w-full" alt="">
+    </div>
+    <div class="card-content p-7">
+        <h2 class="font-medium text-3xl mb-3">Microsoft Edge</h2>
+        <p class="sm:w-80 text-lg sm:mb-24 mb-2">
+           World class performance with more privacy, more productivity and more value while you browse.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Download Now</button>
+    </div>
+</div>
+<div class="card shadow-lg w-full sm:w-96 flex flex-col m-6 overflow-hidden">
+    <div class="image overflow-hidden">
+        <img src="images/c3.webp" class="object-cover w-full" alt="">
+    </div>
+    <div class="card-content p-7">
+        <h2 class="font-medium text-3xl mb-3">Microsoft One Drive</h2>
+        <p class="sm:w-80 text-lg sm:mb-24 mb-1">
+           Save your files and photos to OneDrive and access them from any device, anywhere.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Learn more</button>
+    </div>
+</div>
+<div class="card shadow-lg w-full sm:w-96 flex flex-col m-6 overflow-hidden">
+    <div class="image overflow-hidden">
+        <img src="images/c4.avif" class="object-cover w-full" alt="">
+    </div>
+    <div class="card-content p-7">
+        <h2 class="font-medium text-3xl mb-3">Outlook for iOS and Android</h2>
+        <p class="sm:w-80 text-lg sm:mb-24 mb-2">
+           Connect, Organise. Get things done.
+        </p>
+        <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Download Now</button>
+    </div>
+</div>
+
+ </div>
+     </section>
+
+     <!-- Overlay Image -->
+     <section class="container mx-auto w-full md:h-[36rem] h-screen bg-no-repeat my-20" style="background-image: url(images/posture.avif); ">
+<div class="content md:text-white text-black md:flex md:justify-end md:items-center">
+    <div class="md:mt-48 px-12 mr-[5%] md:pt-[1%] pt-[110%]">
+        <h1 class="sm:text-5xl text-3xl font-medium">Organise your life</h1>
+        <p class="text-lg mt-7">Keep your ideas and notes organized with one note</p>
+        <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Learn more</button>
+    </div>
+  
+</div>
+     </section>
+   
+     <!-- Business setion -->
+     <section class="my-5 py-2 ">
+    <div class="heading sm:ml-28 mt-4 container mx-auto">
+        <h2 class="text-5xl font-medium px-5">For business</h2>
+    </div>
+    <div class="flex flex-wrap justify-center">
+        <div class="card shadow-lg w-full sm:w-96 flex flex-col m-6 overflow-hidden">
+            <div class="image overflow-hidden">
+                <img src="images/b1.avif" class="object-cover w-full" alt="">
+            </div>
+            <div class="card-content p-7">
+                <h2 class="font-medium text-3xl mb-3">Microsoft 365 Copilot</h2>
+                <p class="sm:w-80 text-lg mb-2 sm:mb-36">
+                  Save time and focus on the things that matter most with AI in Microsoft 365 for business.
+                </p>
+                <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Learn more</button>
+            </div>
+        </div>
+        <div class="card shadow-lg w-full sm:w-96 flex flex-col overflow-hidden m-6">
+            <div class="image overflow-hidden">
+                <img src="images/b2.avif" class="object-cover w-full" alt="">
+            </div>
+            <div class="card-content p-7">
+                <h2 class="font-medium text-3xl mb-3">Get Microsoft Teams for your business</h2>
+                <p class="sm:w-80 text-lg sm:mb-24 mb-2">
+                   Online meetings, chat, real-time, collaboration, and shared cloud storage - all in one place.
+                </p>
+                <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-md font-medium rounded-sm px-3 py-4 mt-5">Find the right plan for your business</button>
+            </div>
+        </div>
+        <div class="card shadow-lg w-full sm:w-96 flex flex-col overflow-hidden m-6">
+            <div class="image overflow-hidden">
+                <img src="images/b3.webp" class="object-cover w-full" alt="">
+            </div>
+            <div class="card-content p-7">
+                <h2 class="font-medium text-3xl mb-3">Visual Studio 2022</h2>
+                <p class="sm:w-80 text-lg sm:mb-20 mb-2">
+                    Get the most comprehensive IDE for .NET and C++ developers on Windows for building web, cloud, desktop, mobile apps, services and games.
+                </p>
+                <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Download Visual Studio 2022</button>
+            </div>
+        </div>
+        <div class="card shadow-lg flex flex-col w-full sm:w-96 overflow-hidden m-6 ">
+            <div class="image overflow-hidden">
+                <img src="images/b4.avif" class="object-cover w-full" alt="">
+            </div>
+            <div class="card-content p-7">
+                <h2 class="font-medium text-3xl mb-3">Welcome to your Windows 365 Cloud PC</h2>
+                <p class="sm:w-80 text-lg mb-2 sm:mb-24">
+                  Connect Organise. Get things done.
+                </p>
+                <button class="bg-blue-700 hover:bg-blue-800 cursor-pointer transition text-white text-lg font-medium rounded-sm px-4 py-3 mt-5">Get it today</button>
+            </div>
+        </div>    
+         </div>
+     </section>
+
+     <!-- Links -->
+   <section class="links pt-10 pb-16 md:mx-24 mx-6">
+    <div class="flex justify-between items-center">
+        <div class="media sm:flex sm:space-x-5">
+            <span class="text-xl md:mt-2">Follow Microsoft</span>
+            <div class="info md:text-3xl text-2xl">
+                <i class="ri-facebook-fill"></i>
+                <i class="ri-twitter-x-line"></i>
+                <i class="ri-linkedin-fill"></i>
+            </div>
+        </div>
+        <button class="px-6 py-3 font-medium bg-gray-300 text-lg hover:bg-white hover:shadow-2xl hover:border border rounded duration-50 transition"><a href="#top"><i class="ri-arrow-up-line mr-3 text-xl"></i>Back to Top</a></button>
+    </div>
+   </section>
+</main>
+
+<!-- footer -->
+ <footer class="mt-9 py-10 bg-gray-100 text-sm">
+<div class="flex flex-wrap justify-center">
+    <div class="new flex flex-col m-6 w-full sm:w-60 gap-4">
+        <a href="#" class="font-semibold text-gray-700 text-lg">What's new</a>  
+        <a href="#" class="hover:underline">Surface Book 3</a>  
+        <a href="#" class="hover:underline">Surface Pro</a>  
+        <a href="#" class="hover:underline">Microsoft Copilot</a>  
+        <a href="#" class="hover:underline">Microsoft 365</a>
+        <a href="#" class="hover:underline">Explore Microsoft products</a>
+        <a href="#">Windows 11 apps</a>
+      </div>
+      <div class="new flex flex-col m-6 w-full sm:w-60 gap-4">
+        <a href="#" class="font-semibold text-gray-700 text-lg">Microsoft Store</a>  
+        <a href="#" class="hover:underline">Account profile</a>  
+        <a href="#" class="hover:underline">Download Center</a>  
+        <a href="#" class="hover:underline">Returns</a>  
+        <a href="#" class="hover:underline">Order tracking</a>
+      </div>
+      <div class="new flex flex-col m-6 w-full sm:w-60 gap-4">
+        <a href="#" class="font-semibold text-gray-700 text-lg">Education</a>  
+        <a href="#" class="hover:underline">Microsoft in education</a>  
+        <a href="#" class="hover:underline">Devices for education</a>  
+        <a href="#" class="hover:underline">Microsoft teams for education</a>  
+        <a href="#" class="hover:underline">Microsoft 365 education</a>
+        <a href="#" class="hover:underline">Office Education</a>
+        <a href="#" class="hover:underline">Educator training and development</a>
+        <a href="#" class="hover:underline">Deals for students and parents</a>
+        <a href="#" class="hover:underline">Azure for students</a>
+      </div>
+      <div class="new flex flex-col m-6 w-full sm:w-60 gap-4">
+        <a href="#" class="font-semibold text-gray-700 text-lg">Business</a>  
+        <a href="#" class="hover:underline">Microsoft Cloud</a>  
+        <a href="#" class="hover:underline">Microsoft Security</a>  
+        <a href="#" class="hover:underline">Azure</a>  
+        <a href="#" class="hover:underline">Dynamics 365</a>
+        <a href="#" class="hover:underline">Microsoft Advertising</a>
+        <a href="#" class="hover:underline">Microsoft 365 Copilot</a>
+        <a href="#" class="hover:underline">Microsoft Teams</a>
+      </div>
+      <div class="new flex flex-col m-6 w-full sm:w-60 gap-4">
+        <a href="#" class="font-semibold text-gray-700 text-lg">Developer & IT</a>  
+        <a href="#" class="hover:underline">Developer Center</a>  
+        <a href="#" class="hover:underline">Documentation</a>  
+        <a href="#" class="hover:underline">Microsoft Learn</a>  
+        <a href="#" class="hover:underline">Microsoft Tech Community</a>
+        <a href="#" class="hover:underline">Azure Marketplace</a>
+        <a href="#" class="hover:underline">App Source</a>
+        <a href="#" class="hover:underline">Microsoft Power Platform</a>
+        <a href="#" class="hover:underline">Visual Studio</a>
+      </div>
+      <div class="new flex flex-col m-6 w-full sm:w-60 gap-4">
+        <a href="#" class="font-semibold text-gray-700 text-lg">Company</a>  
+        <a href="#" class="hover:underline">Careers</a>  
+        <a href="#" class="hover:underline">About Microsoft</a>  
+        <a href="#" class="hover:underline">Company news</a>  
+        <a href="#" class="hover:underline">Privacy at Microsoft</a>
+        <a href="#" class="hover:underline">Investors</a>
+        <a href="#" class="hover:underline">Sustainability</a>
+      </div>
+</div>
+<div class="flex md:flex-wrap md:justify-between md:mx-20 mt-5">
+    <div class="flex md:flex-row flex-col gap-6 sm:mx-1 mx-5">
+        <div>
+            <i class="ri-earth-line text-2xl"></i>
+            <span>English (Pakistan)</span>
+        </div>
+        <div>
+            <i class="ri-checkbox-multiple-line text-2xl"></i>
+            <span>Your Privacy Choices</span>
+        </div>
+        <div class="md:mt-2">
+            <span>Consumer health privacy</span>
+        </div>
+       
+    </div>
+    <div class="flex md:flex-row mt-48 sm:mt-1 ml-[-32%] sm:ml-1 gap-1 sm:gap-6">
+        <div>
+          <a href="#">Contact Microsoft</a>
+        </div>
+        <div>
+         <a href="#">Privacy</a>
+        </div>
+        <div>
+          <a href="#">Terms of use</a>
+        </div>
+        <div>
+            <a href="#">Trademarks</a>
+          </div>
+          <div>
+            <a href="#">About our ads</a>
+          </div>
+          <div>
+            <a href="#">&copy; Microsoft 2024</a>
+          </div>
+    </div>
+</div>
+ </footer>
+
+ 
+<!-- JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
